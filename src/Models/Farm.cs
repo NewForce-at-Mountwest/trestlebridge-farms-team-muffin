@@ -15,6 +15,7 @@ namespace Trestlebridge.Models
             resource being purchased.
          */
         public void PurchaseResource<T> (IResource resource, int index)
+        // add resource (for instance cow) to chosen grazing field
         {
             Console.WriteLine(typeof(T).ToString());
             switch (typeof(T).ToString())
@@ -27,6 +28,7 @@ namespace Trestlebridge.Models
             }
         }
 
+        // create a new grazing field and add it to list
         public void AddGrazingField (GrazingField field)
         {
             GrazingFields.Add(field);
