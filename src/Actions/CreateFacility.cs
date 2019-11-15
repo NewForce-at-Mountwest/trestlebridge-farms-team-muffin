@@ -21,8 +21,9 @@ namespace Trestlebridge.Actions
 
 
 
-            
 
+
+            // conditional that takes selection and prints grazing field submenu
             switch (Int32.Parse(input))
             {
                 case 1:

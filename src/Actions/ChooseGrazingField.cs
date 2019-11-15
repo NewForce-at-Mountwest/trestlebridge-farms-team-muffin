@@ -9,10 +9,10 @@ namespace Trestlebridge.Actions
     public class ChooseGrazingField
     {
         public static void CollectInput(Farm farm, IGrazing animal)
+        // clear the terminal
         {
             Utils.Clear();
-        
-
+            // print out all types of grazing fields
             for (int i = 0; i < farm.GrazingFields.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Grazing Field");
@@ -24,8 +24,10 @@ namespace Trestlebridge.Actions
             Console.WriteLine($"Place the animal where?");
 
             Console.Write("> ");
+            // read which grazing field option is selected
             int choice = Int32.Parse(Console.ReadLine());
 
+            // add the animal to the field
             farm.GrazingFields[choice].AddResource(animal);
 
             /*
