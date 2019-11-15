@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals {
-    public class Chicken : IResource, IGrazing, IMeatProducing {
+    public class Chicken : IResource, IMeatProducing {
 
         private Guid _id = Guid.NewGuid();
-        private double _meatProduced = 18.25;
+        private double _meatProduced = 2.45;
 
         private string _shortId {
             get {
@@ -14,20 +14,16 @@ namespace Trestlebridge.Models.Animals {
             }
         }
 
-        public double GrassPerDay { get; set; } = 5.4;
-        public string Type { get; } = "Cow";
+        public string Type { get; } = "Chicken";
 
         // Methods
-        public void Graze () {
-            Console.WriteLine($"Cow {this._shortId} just ate {this.GrassPerDay}kg of grass");
-        }
 
         public double Butcher () {
             return _meatProduced;
         }
 
         public override string ToString () {
-            return $"Cow {this._shortId}. Mooo!";
+            return $"Chicken {this._shortId}. BWUK!";
         }
     }
 }

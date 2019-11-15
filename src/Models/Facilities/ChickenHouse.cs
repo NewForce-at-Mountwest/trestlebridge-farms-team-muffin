@@ -2,9 +2,10 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
+using Trestlebridge.Models.Animals;
 
-namespace Trestlebridge.Models.Facilities{
-    public class ChickenHouse : IFacility<ChickenHouse>{
+namespace Trestlebridge.Models.Facilities {
+    public class ChickenHouse : IFacility<Chicken>{
         private int _capacity = 20;
         private Guid _id = Guid.NewGuid();
         private List<ChickenHouse> _chickens = new List<ChickenHouse>();
@@ -14,17 +15,20 @@ namespace Trestlebridge.Models.Facilities{
             }
         }
 
-        public void AddResource (IFacility ChickenHouse)
+        public void AddResource (Chicken chicken)
         {
             // TODO: implement this...
             throw new NotImplementedException();
         }
 
-        public void AddResource (List<IGrazing> animals)
+        public void AddResource (List<Chicken> chickens)
         {
             // TODO: implement this...
             throw new NotImplementedException();
         }
+
+
+       
 
         public override string ToString()
         {
