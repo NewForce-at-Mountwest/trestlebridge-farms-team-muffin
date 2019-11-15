@@ -26,8 +26,6 @@ namespace Trestlebridge.Actions {
                      Console.WriteLine("Hit Return Key to return to main menu.");
                      Console.ReadLine();
                     break;
-                // default:
-                //     break;
                 case 3:
                     farm.AddNaturalField(new NaturalField());
                     Console.WriteLine("Press return key to go back to main menu.");
