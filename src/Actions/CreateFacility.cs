@@ -9,6 +9,7 @@ namespace Trestlebridge.Actions {
             // print out the options of locations
             Console.WriteLine ("1. Grazing field");
             Console.WriteLine ("2. Plowed field");
+            Console.WriteLine ("4. Chicken House");
 
             // print a line that instructs user to choose option
             Console.WriteLine ();
