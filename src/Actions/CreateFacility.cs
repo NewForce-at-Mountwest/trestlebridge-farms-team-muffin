@@ -18,6 +18,7 @@ namespace Trestlebridge.Actions
             Console.WriteLine("Choose what you want to create");
 
             Console.Write("> ");
+            // reading user selection
             string input = Console.ReadLine();
 
             // conditional that takes selection and prints option submenu
@@ -36,6 +37,9 @@ namespace Trestlebridge.Actions
                     Console.ReadLine();
                     break;
                 default:
+                    break;
+                case 2:
+                    farm.AddPlowedField(new PlowedField());
                     break;
             }
             switch (Int32.Parse(input))
