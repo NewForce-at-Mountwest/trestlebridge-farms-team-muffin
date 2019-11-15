@@ -11,6 +11,7 @@ namespace Trestlebridge.Actions
         public static void CollectInput(Farm farm, IGrazing animal)
         {
             Utils.Clear();
+        
 
             for (int i = 0; i < farm.GrazingFields.Count; i++)
             {
