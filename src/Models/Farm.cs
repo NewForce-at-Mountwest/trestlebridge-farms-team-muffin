@@ -9,6 +9,7 @@ namespace Trestlebridge.Models
     public class Farm
     {
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
+        public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
         public List<ChickenHouse> Chickens { get; } = new List<ChickenHouse>();
 
@@ -45,7 +46,15 @@ namespace Trestlebridge.Models
             GrazingFields.Add(field);
         }
 
-        public void AddNaturalField(NaturalField field)
+        public void AddPlowedField(PlowedField field)
+        {
+            PlowedFields.Add(field);
+            Console.WriteLine("You created a plowed field");
+            Console.WriteLine("Press return key to go back to main menu.");
+            Console.ReadLine();
+        }
+
+        public void AddNaturalField (NaturalField field)
         {
             NaturalFields.Add(field);
             Console.WriteLine("Your Natural Field has been purchased.");
