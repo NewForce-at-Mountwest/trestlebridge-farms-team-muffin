@@ -10,6 +10,7 @@ namespace Trestlebridge.Models
     {
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
         public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
+        public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
 
         /*
             This method must specify the correct product interface of the
@@ -43,32 +44,19 @@ namespace Trestlebridge.Models
             Console.ReadLine();
         }
 
+        public void AddNaturalField (NaturalField field)
+        {
+            NaturalFields.Add(field);
+            Console.WriteLine("Your Natural Field has been purchased.");
+        }
 
-        // ******************PLOWED FIELD*****************************
-
-        /*
-            This method must specify the correct product interface of the
-            resource being purchased.
-         */
-        // public void PurchaseResource<T>(IResource resource, int index)
-        // // add resource (for instance cow) to chosen Plowed field
+        // public override string ToString()
         // {
-        //     Console.WriteLine(typeof(T).ToString());
-        //     switch (typeof(T).ToString())
-        //     {
-        //         case "Sunflower":
-        //             PlowedFields[index].AddResource((IPlowed)resource);
-        //             break;
-        //         default:
-        //             break;
-        //             case "Sesame":
-        //             PlowedFields[index].AddResource((IPlowed)resource);
-        //             break;
+        //     StringBuilder report = new StringBuilder();
 
-        //     }
+        //     GrazingFields.ForEach(gf => report.Append(gf));
+
+        //     return report.ToString();
         // }
-
-        // create a new Plowed field and add it to list
-
     }
 }
