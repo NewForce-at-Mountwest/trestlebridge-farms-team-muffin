@@ -10,20 +10,21 @@ namespace Trestlebridge.Actions {
             Console.WriteLine ("1. Grazing field");
             Console.WriteLine ("2. Plowed field");
             Console.WriteLine ("3. Natural field");
+            Console.WriteLine();
+            Console.WriteLine("Choose what you want to create");
 
-            // print a line that instructs user to choose option
-            Console.WriteLine ();
-            Console.WriteLine ("Choose what you want to create");
-
-            Console.Write ("> ");
-            // reading user selection
-            string input = Console.ReadLine ();
+            Console.Write("> ");
+            string input = Console.ReadLine();
 
             // conditional that takes selection and prints option submenu
             switch (Int32.Parse(input))
             {
                 case 1:
                     farm.AddGrazingField(new GrazingField());
+                        //prints confirmation of grazing field creation.
+                     Console.WriteLine("Grazing Field created.");
+                     Console.WriteLine("Hit Return Key to return to main menu.");
+                     Console.ReadLine();
                     break;
                 // default:
                 //     break;
