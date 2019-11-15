@@ -9,6 +9,7 @@ namespace Trestlebridge.Actions
     {
         public static void CollectInput(Farm farm)
         {
+            //prompts user to select which type of facility to create
             Console.WriteLine("1. Grazing field");
             Console.WriteLine("2. Plowed field");
 
@@ -28,7 +29,9 @@ namespace Trestlebridge.Actions
             {
                 case 1:
                     farm.AddGrazingField(new GrazingField());
+                        //prints confirmation of grazing field creation.
                      Console.WriteLine("Grazing Field created.");
+                     Console.WriteLine("Hit Return Key to return to main menu.");
                      Console.ReadLine();
                     break;
                 default:
