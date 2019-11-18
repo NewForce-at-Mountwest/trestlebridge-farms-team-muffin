@@ -7,7 +7,7 @@ using Trestlebridge.Interfaces;
 namespace Trestlebridge.Models.Facilities {
     public class PlowedField : IFacility<ISeedProducing>
     {
-        private int _capacity = 50;
+        private int _capacity = 13;
         // Change capacity to plants/rows
         private Guid _id = Guid.NewGuid();
 

@@ -25,14 +25,15 @@ namespace Trestlebridge.Actions {
                 case 1:
                     ChooseNaturalField.CollectInput(farm, new Sesame());
                     break;
+                default:
+                    break;
                  case 2:
                     ChooseNaturalField.CollectInput(farm, new Sunflower());
                     break;
                  case 3:
                     ChooseNaturalField.CollectInput(farm, new Wildflower());
                     break;
-                default:
-                    break;
+
             }
         }
     }
