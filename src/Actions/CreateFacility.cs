@@ -14,6 +14,7 @@ namespace Trestlebridge.Actions
             Console.WriteLine("2. Plowed field");
             Console.WriteLine("3. Natural field");
             Console.WriteLine("4. Chicken House");
+            Console.WriteLine("5. Duck House");
             Console.WriteLine();
             Console.WriteLine("Choose what you want to create");
 
@@ -41,17 +42,20 @@ namespace Trestlebridge.Actions
                 case 2:
                     farm.AddPlowedField(new PlowedField());
                     break;
-            }
-            switch (Int32.Parse(input))
-            {
                 case 4:
                     farm.AddChickenHouse(new ChickenHouse());
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                     break;
-                default:
+                case 5:
+                    farm.AddDuckHouse(new DuckHouse());
+                    
+                    Console.WriteLine("Press return key to go back to main menu.");
+                    Console.ReadLine();
                     break;
             }
+
+
         }
     }
 }
