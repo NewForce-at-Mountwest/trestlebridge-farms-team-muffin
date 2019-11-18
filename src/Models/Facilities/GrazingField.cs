@@ -20,14 +20,14 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (IGrazing animal)
         {
-
-         _animals.Add(animal);
+            // TODO: implement this...
+            _animals.Add(animal);
         }
 
         public void AddResource (List<IGrazing> animals)
         {
             // TODO: implement this...
-         _animals.AddRange(animals);
+            _animals.AddRange(animals);
         }
 
         public override string ToString()
