@@ -21,13 +21,13 @@ namespace Trestlebridge.Models.Facilities {
         public void AddResource(ISeedProducing plant)
         {
             // TODO: implement this...
-            throw new NotImplementedException();
+             _plants.Add(plant);
         }
 
-        public void AddResource(List<ISeedProducing> plant)
+        public void AddResource(List<ISeedProducing> plants)
         {
             // TODO: implement this...
-            throw new NotImplementedException();
+            _plants.AddRange(plants);
         }
         public override string ToString()
         {

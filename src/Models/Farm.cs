@@ -28,6 +28,15 @@ namespace Trestlebridge.Models
                     break;
                 default:
                     break;
+                case "Sesame":
+                    NaturalFields[index].AddResource((ISeedProducing)resource);
+                    break;
+                case "Sunflower":
+                    NaturalFields[index].AddResource((ISeedProducing)resource);
+                    break;
+                case "Wildflower":
+                    NaturalFields[index].AddResource((ISeedProducing)resource);
+                    break;
             }
         }
 
