@@ -12,6 +12,7 @@ namespace Trestlebridge.Models
         public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
         public List<ChickenHouse> ChickenHouse { get; } = new List<ChickenHouse>();
+        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
 
         /*
             This method must specify the correct product interface of the
@@ -26,6 +27,9 @@ namespace Trestlebridge.Models
                 case "Cow":
                     GrazingFields[index].AddResource((IGrazing)resource);
                     break;
+                // case "Duck":
+                //     DuckHouses[index].AddResource((Duck)resource);
+                //     break;
                 default:
                     break;
                 case "Sesame":
@@ -54,7 +58,7 @@ namespace Trestlebridge.Models
             Console.ReadLine();
         }
 
-        public void AddNaturalField (NaturalField field)
+        public void AddNaturalField(NaturalField field)
         {
             NaturalFields.Add(field);
             Console.WriteLine("Your Natural Field has been purchased.");
@@ -63,6 +67,12 @@ namespace Trestlebridge.Models
         {
             ChickenHouse.Add(chicken);
             Console.WriteLine("Your chicken coop has been purchased.");
+        }
+
+        public void AddDuckHouse(DuckHouse duckHouse)
+        {
+            DuckHouses.Add(duckHouse);
+            Console.WriteLine("Your duck house has been purchased.");
         }
 
         // public override string ToString()
