@@ -11,9 +11,9 @@ namespace Trestlebridge.Actions
         public static void CollectInput(Farm farm)
         {
             // print option of animals to buy
-            Console.WriteLine ("1. Cow");
-            Console.WriteLine ("2. Ostrich");
-            Console.WriteLine ("3. Goat");
+            Console.WriteLine("1. Cow");
+            Console.WriteLine("2. Ostrich");
+            Console.WriteLine("3. Goat");
             Console.WriteLine("4. Pig");
             Console.WriteLine("5. Sheep");
 
@@ -32,37 +32,48 @@ namespace Trestlebridge.Actions
                     break;
                 default:
                     break;
-
+            }
+            {
+                switch (Int32.Parse(choice))
+                {
+                    case 7:
+                        ChooseDuckHouse.CollectInput(farm, new Duck());
+                        break;
+                    default:
+                        break;
+                }
+            }
+            switch (Int32.Parse(choice))
+            {
                 case 2:
-                    ChooseDuckHouse.CollectInput(farm, new Duck());
+                    ChooseGrazingField.CollectInput(farm, new Ostrich());
+                    break;
+                default:
                     break;
             }
-            switch (Int32.Parse(choice)){
-                case 2:
-                ChooseGrazingField.CollectInput(farm, new Ostrich());
-                break;
-                default:
-                break;
-            }
-            switch (Int32.Parse(choice)){
+            switch (Int32.Parse(choice))
+            {
                 case 3:
-                ChooseGrazingField.CollectInput(farm, new Goat());
-                break;
+                    ChooseGrazingField.CollectInput(farm, new Goat());
+                    break;
                 default:
-                break;
+                    break;
             }
-            switch (Int32.Parse(choice)){
-                case 4: ChooseGrazingField.CollectInput(farm, new Pig());
-                ChooseGrazingField.CollectInput(farm, new Pig());
-                break;
+            switch (Int32.Parse(choice))
+            {
+                case 4:
+                    ChooseGrazingField.CollectInput(farm, new Pig());
+                    break;
                 default:
-                break;
+                    break;
             }
-            switch (Int32.Parse(choice)){
-                case 5: ChooseGrazingField.CollectInput(farm, new Sheep());
-                break;
+            switch (Int32.Parse(choice))
+            {
+                case 5:
+                    ChooseGrazingField.CollectInput(farm, new Sheep());
+                    break;
                 default:
-                break;
+                    break;
             }
         }
     }
