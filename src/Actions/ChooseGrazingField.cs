@@ -29,6 +29,7 @@ namespace Trestlebridge.Actions
 
             // add the animal to the field
             farm.GrazingFields[choice].AddResource(animal);
+            Console.WriteLine($"Thanks for storing your {animal} with us!");
 
             /*
                 Couldn't get this to work. Can you?
