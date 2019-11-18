@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals {
-    public class Chicken : IResource, IMeatProducing {
+    public class Duck : IResource {
 
         private Guid _id = Guid.NewGuid();
-        private double _meatProduced = 1.7;
 
         private string _shortId {
             get {
@@ -14,16 +13,12 @@ namespace Trestlebridge.Models.Animals {
             }
         }
 
-        public string Type { get; } = "Chicken";
+        public string Type { get; } = "Duck";
 
         // Methods
 
-        public double Butcher () {
-            return _meatProduced;
-        }
-
         public override string ToString () {
-            return $"Chicken {this._shortId}. BWUK!";
+            return $"Duck {this._shortId}. QUACK!";
         }
     }
 }
