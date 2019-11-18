@@ -10,7 +10,7 @@ namespace Trestlebridge.Actions {
             // print option of Plants to buy
             Console.WriteLine ("1. Sesame");
             Console.WriteLine ("2. Sunflower");
-            Console.WriteLine ("2. Wildflower");
+            Console.WriteLine ("3. Wildflower");
 
             Console.WriteLine ();
             Console.WriteLine ("What are you buying today?");
@@ -27,6 +27,13 @@ namespace Trestlebridge.Actions {
                     break;
                 default:
                     break;
+                 case 2:
+                    ChooseNaturalField.CollectInput(farm, new Sunflower());
+                    break;
+                 case 3:
+                    ChooseNaturalField.CollectInput(farm, new Wildflower());
+                    break;
+
             }
         }
     }

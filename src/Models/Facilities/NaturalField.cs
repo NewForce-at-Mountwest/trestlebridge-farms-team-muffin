@@ -7,7 +7,7 @@ using Trestlebridge.Interfaces;
 namespace Trestlebridge.Models.Facilities {
     public class NaturalField : IFacility<ISeedProducing>
     {
-        private int _capacity = 50;
+        private int _capacity = 10;
         private Guid _id = Guid.NewGuid();
 
         private List<ISeedProducing> _plants = new List<ISeedProducing>();
@@ -21,13 +21,13 @@ namespace Trestlebridge.Models.Facilities {
         public void AddResource(ISeedProducing plant)
         {
             // TODO: implement this...
-            throw new NotImplementedException();
+             _plants.Add(plant);
         }
 
-        public void AddResource(List<ISeedProducing> plant)
+        public void AddResource(List<ISeedProducing> plants)
         {
             // TODO: implement this...
-            throw new NotImplementedException();
+            _plants.AddRange(plants);
         }
         public override string ToString()
         {

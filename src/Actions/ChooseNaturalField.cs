@@ -3,6 +3,7 @@ using System.Linq;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models;
 using Trestlebridge.Models.Animals;
+using Trestlebridge.Models.Plants;
 
 namespace Trestlebridge.Actions
 {
@@ -28,12 +29,22 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine());
 
             // add the animal to the field
-            farm.NaturalFields[choice].AddResource(plant);
-
-            /*
-                Couldn't get this to work. Can you?
-                Stretch goal. Only if the app is fully functional.
-             */
+            if(plant is Sunflower || plant is Wildflower)
+            {farm.NaturalFields[choice-1].AddResource(plant);
+            Console.WriteLine("You have spread your seed. Press any key to return home.");
+                        Console.ReadLine();
+                }
+            else{
+                Console.WriteLine("Please choose an appropriate field.");
+                Console.WriteLine("Press any key to re-select your field.");
+                Console.ReadLine();
+                // make list to select reappear again
+                CollectInput(farm, plant);
+            }
+            Console.WriteLine();
+            //     Couldn't get this to work. Can you?
+            //     Stretch goal. Only if the app is fully functional.
+            //  */
             // farm.PurchaseResource<IGrazing>(animal, choice);
 
         }
