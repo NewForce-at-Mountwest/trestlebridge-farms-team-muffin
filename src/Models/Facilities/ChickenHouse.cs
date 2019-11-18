@@ -6,7 +6,7 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Models.Facilities {
     public class ChickenHouse : IFacility<Chicken>{
-        private int _capacity = 15;
+        private int _capacity = 20;
         private Guid _id = Guid.NewGuid();
         private List<ChickenHouse> _chickens = new List<ChickenHouse>();
         public double Capacity {
@@ -18,13 +18,13 @@ namespace Trestlebridge.Models.Facilities {
         public void AddResource (Chicken chicken)
         {
             // TODO: implement this...
-            // _chickens.Add(chicken);
+            throw new NotImplementedException();
         }
 
         public void AddResource (List<Chicken> chickens)
         {
             // TODO: implement this...
-            // _chickens.AddRange(chicken);
+            throw new NotImplementedException();
         }
 
 
@@ -35,7 +35,7 @@ namespace Trestlebridge.Models.Facilities {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Chicken House {shortId} has {this._chickens.Count} chickens\n");
+            output.Append($"Chicken House {shortId} has {this._chickens.Count} animals\n");
             this._chickens.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();

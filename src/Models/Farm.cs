@@ -59,9 +59,9 @@ namespace Trestlebridge.Models
             NaturalFields.Add(field);
             Console.WriteLine("Your Natural Field has been purchased.");
         }
-        public void AddChickenHouse(ChickenHouse house)
+        public void AddChickenHouse(ChickenHouse chicken)
         {
-            // ChickenHouse.Add(house);
+            Chickens.Add(chicken);
             Console.WriteLine("Your chicken coop has been purchased.");
         }
 
