@@ -11,7 +11,7 @@ namespace Trestlebridge.Models
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
         public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
-        public List<ChickenHouse> Chickens { get; } = new List<ChickenHouse>();
+        public List<ChickenHouse> ChickenHouse { get; } = new List<ChickenHouse>();
 
         /*
             This method must specify the correct product interface of the
@@ -61,7 +61,7 @@ namespace Trestlebridge.Models
         }
         public void AddChickenHouse(ChickenHouse chicken)
         {
-            Chickens.Add(chicken);
+            ChickenHouse.Add(chicken);
             Console.WriteLine("Your chicken coop has been purchased.");
         }
 
