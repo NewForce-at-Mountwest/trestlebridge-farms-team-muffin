@@ -15,7 +15,7 @@ namespace Trestlebridge.Actions
             // print out all types of chicken houses
             for (int i = 0; i < farm.ChickenHouse.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Chicken House");
+                Console.WriteLine($"{i + 1}. Chicken House: {farm.ChickenHouse[i]}");
             }
 
             Console.WriteLine();

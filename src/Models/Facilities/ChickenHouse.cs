@@ -43,9 +43,6 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
-
-
-
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

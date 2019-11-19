@@ -15,7 +15,7 @@ namespace Trestlebridge.Actions
             // print out all duck houses
             for (int i = 0; i < farm.DuckHouses.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Duck House");
+                Console.WriteLine($"{i + 1}. Duck House: {farm.DuckHouses[i]}");
             }
 
             Console.WriteLine();
@@ -31,6 +31,7 @@ namespace Trestlebridge.Actions
             farm.DuckHouses[choice-1].AddResource(duck);
                 Console.WriteLine($"Thanks for storing your duck with us! Press any key to return to purchase menu.");
                 Console.ReadLine();
+
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
