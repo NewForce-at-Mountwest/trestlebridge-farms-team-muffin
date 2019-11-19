@@ -17,14 +17,28 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (DuckHouse duck)
         {
-            // TODO: implement this...
-           _ducks.Add(duck);
+             if(this.Capacity > this._ducks.Count)
+        {
+             _ducks.Add(duck);
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
+
         }
 
         public void AddResource (List<DuckHouse> duck)
         {
-            // TODO: implement this...
-             _ducks.AddRange(duck);
+            if(this.Capacity > this._ducks.Count)
+        {
+                         _ducks.AddRange(duck);
+
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
         }
 
 

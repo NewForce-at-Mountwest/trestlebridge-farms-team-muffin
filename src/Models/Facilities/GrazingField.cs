@@ -20,14 +20,28 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (IGrazing animal)
         {
-            // TODO: implement this...
-            _animals.Add(animal);
+             if(this.Capacity > this._animals.Count)
+        {
+             _animals.Add(animal);
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
+
         }
 
         public void AddResource (List<IGrazing> animals)
         {
-            // TODO: implement this...
+            if(this.Capacity > this._animals.Count)
+        {
             _animals.AddRange(animals);
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
+
         }
 
         public override string ToString()
