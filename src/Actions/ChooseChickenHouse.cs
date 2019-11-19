@@ -28,7 +28,9 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine());
 
             // add the animal to the field
-            farm.ChickenHouse[choice].AddResource(chicken);
+            farm.ChickenHouse[choice-1].AddResource(chicken);
+            Console.WriteLine($"Thanks for storing your {chicken} with us! Press any key to return to purchase menu.");
+            Console.ReadLine();
 
             /*
                 Couldn't get this to work. Can you?

@@ -6,11 +6,11 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Models.Facilities
 {
-    public class ChickenHouse : IFacility<ChickenHouse>
+    public class ChickenHouse : IFacility<Chicken>
     {
         private int _capacity = 20;
         private Guid _id = Guid.NewGuid();
-        private List<ChickenHouse> _chickens = new List<ChickenHouse>();
+        private List<Chicken> _chickens = new List<Chicken>();
         public double Capacity
         {
             get
@@ -18,22 +18,29 @@ namespace Trestlebridge.Models.Facilities
                 return _capacity;
             }
         }
-
-        public void AddResource(ChickenHouse chicken)
-        {
-            // TODO: implement this...
-            _chickens.Add(chicken);
-        }
-
-        public void AddResource(List<ChickenHouse> chicken)
-        {
-            // TODO: implement this...
-            _chickens.AddRange(chicken);
-        }
-
         public void AddResource(Chicken chicken)
         {
-            throw new NotImplementedException();
+            if (this.Capacity > this._chickens.Count)
+            {
+                _chickens.Add(chicken);
+            }
+            else
+            {
+                Console.WriteLine("You must first buy more land.");
+                Console.ReadLine();
+            }
+        }
+        public void AddResource(List<Chicken> chickens)
+        {
+            if (this.Capacity > this._chickens.Count)
+            {
+                _chickens.AddRange(chickens);
+            }
+            else
+            {
+                Console.WriteLine("You must first buy more land.");
+                Console.ReadLine();
+            }
         }
 
 

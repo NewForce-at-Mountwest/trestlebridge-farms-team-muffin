@@ -28,8 +28,9 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine());
 
             // add the duck to the duck house
-            farm.DuckHouses[choice].AddResource(duck);
-
+            farm.DuckHouses[choice-1].AddResource(duck);
+                Console.WriteLine($"Thanks for storing your duck with us! Press any key to return to purchase menu.");
+                Console.ReadLine();
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
