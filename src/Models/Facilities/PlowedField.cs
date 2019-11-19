@@ -21,14 +21,26 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (ISeedProducing plant)
         {
-            // TODO: implement this...
+             if(this.Capacity > this._plants.Count)
+        {
             _plants.Add(plant);
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
         }
 
         public void AddResource (List<ISeedProducing> plants)
         {
-            // TODO: implement this...
+             if(this.Capacity > this._plants.Count)
+        {
             _plants.AddRange(plants);
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
         }
 
         public override string ToString()

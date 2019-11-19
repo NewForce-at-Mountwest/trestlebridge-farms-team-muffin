@@ -27,8 +27,26 @@ namespace Trestlebridge.Actions
             // read which grazing field option is selected
             int choice = Int32.Parse(Console.ReadLine());
 
+
             // add the animal to the field
-            farm.GrazingFields[choice].AddResource(animal);
+            farm.GrazingFields[choice - 1].AddResource(animal);
+            if (animal is Duck || animal is Chicken)
+            {
+                Console.WriteLine("Please choose an appropriate field.");
+                Console.WriteLine("Press any key to re-select your field.");
+                Console.ReadLine();
+                // make list to select reappear again
+                CollectInput(farm, animal);
+            }
+            else
+            {
+                Console.WriteLine($"Thanks for storing your {animal} with us! Press any key to return to purchase menu.");
+                Console.ReadLine();
+            }
+
+
+
+
 
             /*
                 Couldn't get this to work. Can you?

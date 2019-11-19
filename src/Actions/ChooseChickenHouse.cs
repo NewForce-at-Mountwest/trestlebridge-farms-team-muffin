@@ -12,7 +12,7 @@ namespace Trestlebridge.Actions
         // clear the terminal
         {
             Utils.Clear();
-            // print out all types of grazing fields
+            // print out all types of chicken houses
             for (int i = 0; i < farm.ChickenHouse.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Chicken House");
