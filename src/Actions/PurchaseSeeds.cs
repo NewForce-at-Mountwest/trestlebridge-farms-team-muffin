@@ -22,18 +22,17 @@ namespace Trestlebridge.Actions {
             // conditional to print from user selection
             switch (Int32.Parse(choice))
             {
-                case 1:
-                    ChooseNaturalField.CollectInput(farm, new Sesame());
+                 case 1:
+                    ChoosePlowedField.CollectInput(farm, new Sesame());
                     break;
                 default:
                     break;
                  case 2:
-                    ChooseNaturalField.CollectInput(farm, new Sunflower());
+                    DirectSunflowerSeeds.CollectInput(farm);
                     break;
-                 case 3:
+                case 3:
                     ChooseNaturalField.CollectInput(farm, new Wildflower());
                     break;
-
             }
         }
     }
