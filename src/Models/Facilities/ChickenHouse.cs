@@ -4,26 +4,35 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models.Animals;
 
-namespace Trestlebridge.Models.Facilities {
-    public class ChickenHouse : IFacility<Chicken>{
+namespace Trestlebridge.Models.Facilities
+{
+    public class ChickenHouse : IFacility<ChickenHouse>
+    {
         private int _capacity = 20;
         private Guid _id = Guid.NewGuid();
         private List<ChickenHouse> _chickens = new List<ChickenHouse>();
-        public double Capacity {
-            get {
+        public double Capacity
+        {
+            get
+            {
                 return _capacity;
             }
         }
 
-        public void AddResource (Chicken chicken)
+        public void AddResource(ChickenHouse chicken)
         {
             // TODO: implement this...
-            throw new NotImplementedException();
+            _chickens.Add(chicken);
         }
 
-        public void AddResource (List<Chicken> chickens)
+        public void AddResource(List<ChickenHouse> chicken)
         {
             // TODO: implement this...
+            _chickens.AddRange(chicken);
+        }
+
+        public void AddResource(Chicken chicken)
+        {
             throw new NotImplementedException();
         }
 
@@ -40,5 +49,10 @@ namespace Trestlebridge.Models.Facilities {
 
             return output.ToString();
         }
+
+        // internal void AddResource(Chicken chicken)
+        // {
+        //     throw new NotImplementedException();
+        // }
     }
 }
