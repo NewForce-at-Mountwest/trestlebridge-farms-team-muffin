@@ -16,7 +16,7 @@ namespace Trestlebridge.Actions
             // print out all types of Natural fields
             for (int i = 0; i < farm.NaturalFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Natural Field");
+                Console.WriteLine($"{i + 1}. Natural Field: {farm.NaturalFields[i]}");
             }
 
             Console.WriteLine();
@@ -31,14 +31,14 @@ namespace Trestlebridge.Actions
             // add the animal to the field
             if(plant is Sunflower || plant is Wildflower)
             {farm.NaturalFields[choice-1].AddResource(plant);
-            Console.WriteLine("You have spread your seed. Press any key to return home.");
+            Console.WriteLine("You have spread your seed into a Natural field. Press any key to return home.");
                         Console.ReadLine();
                 }
             else{
                 Console.WriteLine("Please choose an appropriate field.");
                 Console.WriteLine("Press any key to re-select your field.");
                 Console.ReadLine();
-                // make list to select reappear again
+                // make list to select again
                 CollectInput(farm, plant);
             }
             Console.WriteLine();

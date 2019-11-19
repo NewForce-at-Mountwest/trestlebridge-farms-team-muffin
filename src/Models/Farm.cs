@@ -32,15 +32,16 @@ namespace Trestlebridge.Models
                 //     break;
                 default:
                     break;
-                case "Sesame":
-                    NaturalFields[index].AddResource((ISeedProducing)resource);
-                    break;
                 case "Sunflower":
                     NaturalFields[index].AddResource((ISeedProducing)resource);
                     break;
                 case "Wildflower":
                     NaturalFields[index].AddResource((ISeedProducing)resource);
                     break;
+                case "Sesame":
+                    PlowedFields[index].AddResource((ISeedProducing)resource);
+                    break;
+
             }
         }
 
@@ -53,15 +54,11 @@ namespace Trestlebridge.Models
         public void AddPlowedField(PlowedField field)
         {
             PlowedFields.Add(field);
-            Console.WriteLine("You created a plowed field");
-            Console.WriteLine("Press return key to go back to main menu.");
-            Console.ReadLine();
         }
 
         public void AddNaturalField(NaturalField field)
         {
             NaturalFields.Add(field);
-            Console.WriteLine("Your Natural Field has been purchased.");
         }
         public void AddChickenHouse(ChickenHouse chicken)
         {
@@ -75,13 +72,13 @@ namespace Trestlebridge.Models
             Console.WriteLine("Your duck house has been purchased.");
         }
 
-        // public override string ToString()
-        // {
-        //     StringBuilder report = new StringBuilder();
+        public override string ToString()
+        {
+            StringBuilder report = new StringBuilder();
 
-        //     GrazingFields.ForEach(gf => report.Append(gf));
+            GrazingFields.ForEach(gf => report.Append(gf));
 
-        //     return report.ToString();
-        // }
+            return report.ToString();
+        }
     }
 }
