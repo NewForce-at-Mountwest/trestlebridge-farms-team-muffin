@@ -41,13 +41,6 @@ namespace Trestlebridge.Actions
                 CollectInput(farm, plant);
             }
             Console.WriteLine();
-
-            /*
-                Couldn't get this to work. Can you?
-                Stretch goal. Only if the app is fully functional.
-             */
-            // farm.PurchaseResource<IPlowed>(plant, choice);
-
         }
     }
 }

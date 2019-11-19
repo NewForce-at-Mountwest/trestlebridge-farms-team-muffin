@@ -29,6 +29,7 @@ namespace Trestlebridge
 
             while (true)
             {
+                // Main menu displayed
                 DisplayBanner();
                 Console.WriteLine("1. Create Facility");
                 Console.WriteLine("2. Purchase Animals");
@@ -41,6 +42,7 @@ namespace Trestlebridge
                 Console.Write("> ");
                 string option = Console.ReadLine();
 
+                // Collecting user input from menu
                 if (option == "1")
                 {
                     DisplayBanner();
