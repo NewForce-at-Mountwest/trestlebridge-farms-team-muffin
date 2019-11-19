@@ -31,13 +31,6 @@ namespace Trestlebridge.Actions
             farm.DuckHouses[choice-1].AddResource(duck);
                 Console.WriteLine($"Thanks for storing your duck with us! Press any key to return to purchase menu.");
                 Console.ReadLine();
-
-            /*
-                Couldn't get this to work. Can you?
-                Stretch goal. Only if the app is fully functional.
-             */
-            // farm.PurchaseResource<IGrazing>(animal, choice);
-
         }
     }
 

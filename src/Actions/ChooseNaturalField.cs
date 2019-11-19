@@ -28,7 +28,7 @@ namespace Trestlebridge.Actions
             // read which natural field option is selected
             int choice = Int32.Parse(Console.ReadLine());
 
-            // add the animal to the field
+            // add the plant to the field
             if(plant is Sunflower || plant is Wildflower)
             {farm.NaturalFields[choice-1].AddResource(plant);
             Console.WriteLine("You have spread your seed into a Natural field. Press any key to return home.");
@@ -42,10 +42,6 @@ namespace Trestlebridge.Actions
                 CollectInput(farm, plant);
             }
             Console.WriteLine();
-            //     Couldn't get this to work. Can you?
-            //     Stretch goal. Only if the app is fully functional.
-            //  */
-            // farm.PurchaseResource<IGrazing>(animal, choice);
 
         }
     }

@@ -19,18 +19,22 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
+        // Methods to add resource to facility
         public void AddResource(Duck duck)
         {
+            // If room available, place animal in this facility
             if (this.Capacity > this._ducks.Count)
             {
                 _ducks.Add(duck);
             }
             else
             {
+                 // If no room available, alert to purchase facility
                 Console.WriteLine("You must first buy more land.");
                 Console.ReadLine();
             }
         }
+        // Add an array of animals
         public void AddResource(List<Duck> duck)
         {
             if (this.Capacity > this._ducks.Count)
@@ -44,7 +48,7 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
-
+// Showing the count of animals in the facility
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

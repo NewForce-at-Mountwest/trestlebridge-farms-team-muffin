@@ -18,18 +18,23 @@ namespace Trestlebridge.Models.Facilities
                 return _capacity;
             }
         }
+
+        // Methods to add resource to facility
         public void AddResource(Chicken chicken)
         {
+            // If room available, place animal in this facility
             if (this.Capacity > this._chickens.Count)
             {
                 _chickens.Add(chicken);
             }
             else
             {
-                Console.WriteLine("You must first buy more land.");
+                // If no room available, alert to purchase facility
+                Console.WriteLine("You must first purchase a chicken house.");
                 Console.ReadLine();
             }
         }
+        // Add an array of animals
         public void AddResource(List<Chicken> chickens)
         {
             if (this.Capacity > this._chickens.Count)
@@ -43,6 +48,7 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
+        // Showing the count of animals in the facility
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();
@@ -53,10 +59,5 @@ namespace Trestlebridge.Models.Facilities
 
             return output.ToString();
         }
-
-        // internal void AddResource(Chicken chicken)
-        // {
-        //     throw new NotImplementedException();
-        // }
     }
 }

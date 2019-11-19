@@ -32,27 +32,31 @@ namespace Trestlebridge.Actions
                     Console.WriteLine("Hit Return Key to return to main menu.");
                     Console.ReadLine();
                     break;
-                case 3:
-                    farm.AddNaturalField(new NaturalField());
-                    Console.WriteLine("Natural Field created.");
-                    Console.WriteLine("Press return key to go back to main menu.");
-                    Console.ReadLine();
-                    break;
                 default:
                     break;
                 case 2:
                     farm.AddPlowedField(new PlowedField());
+                    //prints confirmation of plowed field creation.
                     Console.WriteLine("Plowed Field created.");
+                    Console.WriteLine("Press return key to go back to main menu.");
+                    Console.ReadLine();
+                    break;
+                case 3:
+                    farm.AddNaturalField(new NaturalField());
+                    //prints confirmation of natural field creation.
+                    Console.WriteLine("Natural Field created.");
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                     break;
                 case 4:
                     farm.AddChickenHouse(new ChickenHouse());
+                    //prints confirmation of chicken house creation.
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                     break;
                 case 5:
                     farm.AddDuckHouse(new DuckHouse());
+                    //prints confirmation of duck house creation.
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                     break;

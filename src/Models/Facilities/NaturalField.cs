@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 
 
-namespace Trestlebridge.Models.Facilities {
+namespace Trestlebridge.Models.Facilities
+{
     public class NaturalField : IFacility<ISeedProducing>
     {
         private int _capacity = 10;
@@ -12,37 +13,45 @@ namespace Trestlebridge.Models.Facilities {
 
         private List<ISeedProducing> _plants = new List<ISeedProducing>();
 
-        public double Capacity {
-            get {
+        public double Capacity
+        {
+            get
+            {
                 return _capacity;
             }
         }
 
         public void AddResource(ISeedProducing plant)
         {
-              if(this.Capacity > this._plants.Count)
-        {
-            _plants.Add(plant);
-        }
-        else{
-            Console.WriteLine("You must first buy more land.");
-            Console.ReadLine();
-        }
+            // If room available, place animal in this facility
+            if (this.Capacity > this._plants.Count)
+            {
+                _plants.Add(plant);
+            }
+            else
+            {
+                // If no room available, alert to purchase facility
+                Console.WriteLine("You must first buy more land.");
+                Console.ReadLine();
+            }
 
         }
 
+        // Add an array of plants
         public void AddResource(List<ISeedProducing> plants)
         {
-            if(this.Capacity > this._plants.Count)
-        {
-            _plants.AddRange(plants);
-        }
-        else{
-            Console.WriteLine("You must first buy more land.");
-            Console.ReadLine();
-        }
+            if (this.Capacity > this._plants.Count)
+            {
+                _plants.AddRange(plants);
+            }
+            else
+            {
+                Console.WriteLine("You must first buy more land.");
+                Console.ReadLine();
+            }
 
         }
+        // Showing the count of plants in the field
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

@@ -43,17 +43,6 @@ namespace Trestlebridge.Actions
                 Console.WriteLine($"Thanks for storing your {animal} with us! Press any key to return to purchase menu.");
                 Console.ReadLine();
             }
-
-
-
-
-
-            /*
-                Couldn't get this to work. Can you?
-                Stretch goal. Only if the app is fully functional.
-             */
-            // farm.PurchaseResource<IGrazing>(animal, choice);
-
         }
     }
 }
