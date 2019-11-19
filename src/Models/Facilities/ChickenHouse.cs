@@ -8,7 +8,7 @@ namespace Trestlebridge.Models.Facilities {
     public class ChickenHouse : IFacility<Chicken>{
         private int _capacity = 20;
         private Guid _id = Guid.NewGuid();
-        private List<ChickenHouse> _chickens = new List<ChickenHouse>();
+        private List<Chicken> _chickens = new List<Chicken>();
         public double Capacity {
             get {
                 return _capacity;
@@ -17,18 +17,28 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (Chicken chicken)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+             if(this.Capacity > this._chickens.Count)
+        {
+            _chickens.Add(chicken);
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
+
         }
 
         public void AddResource (List<Chicken> chickens)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+           if(this.Capacity > this._chickens.Count)
+        {
+            _chickens.AddRange(chickens);
         }
-
-
-
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
+        }
 
         public override string ToString()
         {

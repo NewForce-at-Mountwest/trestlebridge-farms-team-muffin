@@ -15,7 +15,7 @@ namespace Trestlebridge.Actions
             // print out all types of grazing fields
             for (int i = 0; i < farm.GrazingFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Grazing Field");
+                Console.WriteLine($"{i + 1}. Grazing Field: {farm.GrazingFields[i]}");
             }
 
             Console.WriteLine();
