@@ -20,17 +20,19 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (IGrazing animal)
         {
+            // If room available, place animal in this facility
              if(this.Capacity > this._animals.Count)
         {
              _animals.Add(animal);
         }
         else{
+             // If no room available, alert to purchase facility
             Console.WriteLine("You must first buy more land.");
             Console.ReadLine();
         }
 
         }
-
+// Add an array of animals
         public void AddResource (List<IGrazing> animals)
         {
             if(this.Capacity > this._animals.Count)
@@ -44,6 +46,7 @@ namespace Trestlebridge.Models.Facilities {
 
         }
 
+// Showing the count of animals in the facility
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

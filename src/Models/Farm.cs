@@ -8,6 +8,7 @@ namespace Trestlebridge.Models
 {
     public class Farm
     {
+        // Lists of facilities
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
         public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
@@ -19,7 +20,7 @@ namespace Trestlebridge.Models
             resource being purchased.
          */
         public void PurchaseResource<T>(IResource resource, int index)
-        // add resource (for instance cow) to chosen grazing field
+        // add resource (for instance cow) to chosen facility
         {
             Console.WriteLine(typeof(T).ToString());
             switch (typeof(T).ToString())
@@ -27,9 +28,6 @@ namespace Trestlebridge.Models
                 case "Cow":
                     GrazingFields[index].AddResource((IGrazing)resource);
                     break;
-                // case "Duck":
-                //     DuckHouses[index].AddResource((Duck)resource);
-                //     break;
                 default:
                     break;
                 case "Sunflower":
@@ -45,7 +43,7 @@ namespace Trestlebridge.Models
             }
         }
 
-        // create a new grazing field and add it to list
+        // create a new facility and add it to list
         public void AddGrazingField(GrazingField field)
         {
             GrazingFields.Add(field);
@@ -72,6 +70,7 @@ namespace Trestlebridge.Models
             Console.WriteLine("Your duck house has been purchased.");
         }
 
+        // Generates report for all facilities purchased
         public override string ToString()
         {
             StringBuilder report = new StringBuilder();

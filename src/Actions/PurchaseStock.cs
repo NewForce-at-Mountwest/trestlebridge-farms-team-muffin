@@ -31,26 +31,33 @@ namespace Trestlebridge.Actions
             {
                 case 1:
                     ChooseGrazingField.CollectInput(farm, new Cow());
+                    //prints confirmation
                     break;
                 default:
                     break;
                 case 2:
                     ChooseGrazingField.CollectInput(farm, new Ostrich());
+                    //prints confirmation
                     break;
                 case 3:
                     ChooseGrazingField.CollectInput(farm, new Goat());
+                    //prints confirmation
                     break;
                 case 4:
                     ChooseGrazingField.CollectInput(farm, new Pig());
+                    //prints confirmation
                     break;
                 case 5:
                     ChooseGrazingField.CollectInput(farm, new Sheep());
+                    //prints confirmation
                     break;
                 case 6:
                     ChooseChickenHouse.CollectInput(farm, new Chicken());
+                    //prints confirmation
                     break;
                 case 7:
                     ChooseDuckHouse.CollectInput(farm, new Duck());
+                    //prints confirmation
                     break;
             }
         }
