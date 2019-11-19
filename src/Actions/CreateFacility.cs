@@ -34,6 +34,7 @@ namespace Trestlebridge.Actions
                     break;
                 case 3:
                     farm.AddNaturalField(new NaturalField());
+                    Console.WriteLine("Natural Field created.");
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                     break;
@@ -41,6 +42,9 @@ namespace Trestlebridge.Actions
                     break;
                 case 2:
                     farm.AddPlowedField(new PlowedField());
+                    Console.WriteLine("Plowed Field created.");
+                    Console.WriteLine("Press return key to go back to main menu.");
+                    Console.ReadLine();
                     break;
                 case 4:
                     farm.AddChickenHouse(new ChickenHouse());
@@ -49,7 +53,6 @@ namespace Trestlebridge.Actions
                     break;
                 case 5:
                     farm.AddDuckHouse(new DuckHouse());
-                    
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                     break;
