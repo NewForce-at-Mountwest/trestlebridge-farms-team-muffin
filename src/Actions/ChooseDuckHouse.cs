@@ -29,6 +29,8 @@ namespace Trestlebridge.Actions
 
             // add the duck to the duck house
             farm.DuckHouses[choice-1].AddResource(duck);
+                Console.WriteLine($"Thanks for storing your duck with us! Press any key to return to purchase menu.");
+                Console.ReadLine();
 
             /*
                 Couldn't get this to work. Can you?

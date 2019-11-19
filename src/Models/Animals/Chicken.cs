@@ -6,7 +6,7 @@ namespace Trestlebridge.Models.Animals {
     public class Chicken : IResource, IMeatProducing {
 
         private Guid _id = Guid.NewGuid();
-        private double _meatProduced = 2.45;
+        private double _meatProduced = 1.7;
 
         private string _shortId {
             get {
