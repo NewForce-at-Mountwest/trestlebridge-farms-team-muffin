@@ -17,18 +17,28 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (Chicken chicken)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+             if(this.Capacity > this._chickens.Count)
+        {
+            _chickens.Add(chicken);
+        }
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
+
         }
 
         public void AddResource (List<Chicken> chickens)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+           if(this.Capacity > this._chickens.Count)
+        {
+            _chickens.AddRange(chickens);
         }
-
-
-
+        else{
+            Console.WriteLine("You must first buy more land.");
+            Console.ReadLine();
+        }
+        }
 
         public override string ToString()
         {
