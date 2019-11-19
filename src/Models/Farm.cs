@@ -75,13 +75,13 @@ namespace Trestlebridge.Models
             Console.WriteLine("Your duck house has been purchased.");
         }
 
-        // public override string ToString()
-        // {
-        //     StringBuilder report = new StringBuilder();
+        public override string ToString()
+        {
+            StringBuilder report = new StringBuilder();
 
-        //     GrazingFields.ForEach(gf => report.Append(gf));
+            GrazingFields.ForEach(gf => report.Append(gf));
 
-        //     return report.ToString();
-        // }
+            return report.ToString();
+        }
     }
 }
