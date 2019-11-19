@@ -12,8 +12,8 @@ namespace Trestlebridge.Actions
         // clear the terminal
         {
             Utils.Clear();
-            // print out all types of grazing fields
-            for (int i = 0; i < farm.Chickens.Count; i++)
+            // print out all types of chicken houses
+            for (int i = 0; i < farm.ChickenHouse.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Chicken House");
             }
@@ -28,7 +28,7 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine());
 
             // add the animal to the field
-            farm.Chickens[choice].AddResource(chicken);
+            farm.ChickenHouse[choice].AddResource(chicken);
 
             /*
                 Couldn't get this to work. Can you?
